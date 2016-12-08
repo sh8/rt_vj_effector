@@ -26,13 +26,13 @@ body {
 }
 * { box-shadow: none !important; }
 
-.content, h1, h2, h3, p, div { 
-	font-family: 'Press Start 2P', cursive; 
+.content, h1, h2, h3, p, div {
+	font-family: 'Press Start 2P', cursive;
 	font-weight: normal;
 	}
-.content[id*=-content]:not(#game-content) {	
-	display: none; 
-	overflow-y: auto; 
+.content[id*=-content]:not(#game-content) {
+	display: none;
+	overflow-y: auto;
 	overflow-x: hidden;
 }
 .content img {
@@ -42,7 +42,7 @@ body {
 	float: right;
 }
 .button {
-	background: #c80a0a; 
+	background: #c80a0a;
 	cursor: pointer;
 	padding: 8px;
 	}
@@ -69,16 +69,16 @@ input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover
 #canvas-overlay-container {
 	position: absolute;
 	background: rgba(0,0,0,0.7);
-	height: 100%; 
+	height: 100%;
 	width: 540px;
 	max-width: 100%;
 }
-#canvas-overlay-content { 
-	position: absolute; 
-	top: 33%; 	
-	left: 0; 
+#canvas-overlay-content {
+	position: absolute;
+	top: 33%;
+	left: 0;
 	margin-top: 0;
-	max-width: 100%; 
+	max-width: 100%;
 	text-align: center;
 	width: 540px;
 	max-width: 100%;
@@ -91,7 +91,7 @@ input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover
 .canvas { position:absolute; padding-top: 20px;}
 .main {width: 100%; max-width: 660px; margin: 10px auto; position: static; left: auto;}
 .content { width: 100%; max-width: 540px; text-align: left; margin: 0;}
-.container {text-align: center; margin:0; padding: 0;}
+.container {text-align: center; margin:0; padding-top: 130px;}
 .wrapper { padding:0;}
 .game  { max-width: 540px; margin: auto; }
 
@@ -109,10 +109,10 @@ audio {display: block; }
 /* ---------- Controls ------------------------*/
 
 .controls { text-align: center; margin-top: 15px;}
-.controls-section { 
-	height: auto; 
-	width: 47%; 
-	display: inline-block; 
+.controls-section {
+	height: auto;
+	width: 47%;
+	display: inline-block;
 	margin: 0;
 	text-align: left;
 	}
@@ -124,13 +124,13 @@ audio {display: block; }
 
 /* Game Menu - displayed when game is paused */
 #menu-buttons ul, .controls#menu-buttons ul li{ list-style: none; padding: 0;}
-#menu-buttons ul li { 
+#menu-buttons ul li {
 	height: 40px;
 	line-height: 40px;
 	font-size: 120%;
 	}
 
-.controlSound { 
+.controlSound {
 	background: url('img/audio-icon.png');
 	width: 73px;
 	height: 50px;
@@ -141,10 +141,10 @@ audio {display: block; }
 	width: 36px;
 	float: right;
 	}
-	
-#mute { 
-	display: none; 
-	width: 36px; 
+
+#mute {
+	display: none;
+	width: 36px;
 	height: 25px;
 	}
 
@@ -178,18 +178,18 @@ audio {display: block; }
 }
 
 @media screen and (max-width: 400px) {
-	
+
 	.nomobile {display: none; }
 	.mobile {display: block; }
-	
-	html, body { 
-		overflow-x: hidden; 
+
+	html, body {
+		overflow-x: hidden;
 		height: 100%;
 		}
-	
+
 	.main { margin: 10px auto; }
 	.content { min-height: 0; }
-	
+
 	.controlButton {
 		width: 60px;
 		height: 60px;

@@ -1,0 +1,26 @@
+body {
+	background-image: url("../pacman-bg.jpg") ;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: fixed;
+}
+
+.logo {
+	padding-top: 120px;
+}
+
+ .game-list {
+	 padding-top: 130px;
+ }
+
+ .img-list {
+	 width: 100%;
+	 text-align: center;
+ }
+
+ .img-list-sm {
+	 width: 70%;
+	 display: block;
+	 margin: auto;
+ }
