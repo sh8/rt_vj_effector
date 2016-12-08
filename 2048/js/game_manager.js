@@ -10,6 +10,8 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
 
+	this.mergedValue = 0;
+
   this.setup();
 }
 
@@ -162,6 +164,9 @@ GameManager.prototype.move = function (direction) {
 
           // Converge the two tiles' positions
           tile.updatePosition(positions.next);
+
+					self.mergedValue = merged.value
+					console.log(merged.value)
 
           // Update the score
           self.score += merged.value;
