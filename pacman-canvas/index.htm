@@ -7,7 +7,7 @@
 	<title>Pacman in HTML 5 Canvas</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="pacman-canvas.css">
-	
+
 	<!-- SEO Stuff -->
     <meta name="description" content="Play Pacman Canvas for free on your desktop or mobile. This whole game is open source an was created in HTML5." />
     <link rel="canonical" href="http://pacman.platzh1rsch.ch/" />
@@ -38,17 +38,17 @@
 
 	<!-- AppsFuel verification code -->
 	<meta name="appsfuel_code" content="83d3cedc1050a5c"/>
-	
+
 	<!-- Mobile Viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-	
+
 	<!-- Apple Mobile Web Capability -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	
+
 	<!-- Script -->
 	<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
 	<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
-	
+
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 
@@ -64,7 +64,7 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
-	
+
 </head>
 
 <body>
@@ -86,7 +86,7 @@
 		<h1>Highscore</h1>
 		<p>
 			<ol id="highscore-list">
-				
+
 			</ol>
 		</p>
 	</div>
@@ -176,15 +176,15 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
 		</div>
-	
-	
+
+
 	<!-- main game content -->
 	<div class="game wrapper">
-	
+
 		<div class="score">Score:</div>
 		<div class="level">Lvl:</div>
 		<div class="lives">Lives: </div>
-		
+
 		<div class="controlSound">
 			<img src="img/audio-icon-mute.png" id="mute">
 		</div>
@@ -202,10 +202,10 @@
 		</div>
 
 		<div class="controls" id="game-buttons">
-		<!-- Will be moved to Instructions 
+		<!-- Will be moved to Instructions
 		<p class="nomobile">Use W-A-S-D keys to navigate Pac-Man</p>
 		-->
-		
+
 			<!-- OLD Buttons -->
 			<div>
 				<span id="up" class="controlButton">&uarr;</span>
@@ -215,11 +215,11 @@
 				<span id="down" class="controlButton">&darr;</span>
 				<span id="right" class="controlButton">&rarr;</span>
 			</div>
-			
+
 		</div>
 		<!-- inGame Controls End -->
-		
-		<!-- Game Menu -->		
+
+		<!-- Game Menu -->
 		<div class="controls" id="menu-buttons">
 			<ul>
 				<li class="button" id="newGame">New Game</li>
@@ -227,17 +227,17 @@
 				<li class="button" id="instructions">Instructions</li>
 				<li class="button" id="info">Info</li>
 			</ul>
-			
+
 		</div>
 		<!-- Game Menu End -->
-		
+
 	</div>
-		
+
 	<div class="description nomobile">
 		<p>This whole thing was written in HTML5, CSS3 and Javascript (using small bits of jquery). For the basics I was following the <a href="http://devhammer.net/blog/exploring-html5-canvas-part-1---introduction" target="_blank">"Exploring HTML5 Canvas"</a> Tutorials (Part 1 - 6) by Devhammer. Thanks for the great Tutorial!</a>
 		<p>For some other stuff, like how to write objectorientated javascript I was following the tutorials over at <a href="http://www.codecademy.com/" target="_blank">http://www.codecademy.com/</a>, which is a really great site to learn Javascript and also other languages.</a>
 		<p>If you understand German you can also read my blogpost about this site: <a href="http://blog.platzh1rsch.ch/2012/08/pacman-in-html5-canvas.html">"Pacman in HTML5 Canvas"</a>.</p>
-		
+
 		<span id="audio">
 			<audio id="theme" preload="auto">
 				<source src="wav/theme.wav" type="audio/wav">
@@ -256,14 +256,15 @@
 				<source src="mp3/powerpill.mp3" type="audio/mpeg">
 			</audio>
 		</span>
-		
-		
+
+
 	</div>
 
 </div>
 </div>
 </div>
 
+  <script src="../js/osc-browser.min.js"></script>
 	<script src="pacman-canvas.js" type="text/javascript"></script>
 
 
