@@ -1,4 +1,4 @@
-# Real TIme Effector
+# Real Time VJ Effector
 
 ![](https://raw.githubusercontent.com/sh8/rt_vj_effector/master/images/readme_logo.png)
 
