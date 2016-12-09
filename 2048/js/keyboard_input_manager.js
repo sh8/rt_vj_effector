@@ -1,5 +1,6 @@
 function KeyboardInputManager() {
   this.events = {};
+	var supportTouch = 'ontouchstart' in window;
 
   if (window.navigator.msPointerEnabled) {
     //Internet Explorer 10 style
@@ -7,9 +8,9 @@ function KeyboardInputManager() {
     this.eventTouchmove     = "MSPointerMove";
     this.eventTouchend      = "MSPointerUp";
   } else {
-    this.eventTouchstart    = "touchstart";
-    this.eventTouchmove     = "touchmove";
-    this.eventTouchend      = "touchend";
+    this.eventTouchstart    = supportTouch ? 'touchstart' : 'mousedown';
+    this.eventTouchmove     = supportTouch ? 'touchmove' : 'mousemove';
+    this.eventTouchend      = supportTouch ? 'touchend' : 'mouseup';
   }
 
   this.listen();
@@ -78,17 +79,12 @@ KeyboardInputManager.prototype.listen = function () {
   var gameContainer = document.getElementsByClassName("game-container")[0];
 
   gameContainer.addEventListener(this.eventTouchstart, function (event) {
-    if ((!window.navigator.msPointerEnabled && event.touches.length > 1) ||
-        event.targetTouches.length > 1) {
-      return; // Ignore if touching with more than 1 finger
-    }
-
     if (window.navigator.msPointerEnabled) {
       touchStartClientX = event.pageX;
       touchStartClientY = event.pageY;
     } else {
-      touchStartClientX = event.touches[0].clientX;
-      touchStartClientY = event.touches[0].clientY;
+      touchStartClientX = event.screenX;
+      touchStartClientY = event.screenY;
     }
 
     event.preventDefault();
@@ -99,10 +95,6 @@ KeyboardInputManager.prototype.listen = function () {
   });
 
   gameContainer.addEventListener(this.eventTouchend, function (event) {
-    if ((!window.navigator.msPointerEnabled && event.touches.length > 0) ||
-        event.targetTouches.length > 0) {
-      return; // Ignore if still touching with one or more fingers
-    }
 
     var touchEndClientX, touchEndClientY;
 
@@ -110,8 +102,8 @@ KeyboardInputManager.prototype.listen = function () {
       touchEndClientX = event.pageX;
       touchEndClientY = event.pageY;
     } else {
-      touchEndClientX = event.changedTouches[0].clientX;
-      touchEndClientY = event.changedTouches[0].clientY;
+      touchEndClientX = event.screenX;
+      touchEndClientY = event.screenY;
     }
 
     var dx = touchEndClientX - touchStartClientX;

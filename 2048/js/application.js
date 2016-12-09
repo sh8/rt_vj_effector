@@ -10,7 +10,7 @@ window.requestAnimationFrame(function () {
 		let mergedValue = GameManagerInstance.mergedValue;
 		console.log(mergedValue);
 		oscPort.send({
-			address: "/",
+			address: "/layer5/video/scale/values",
 			args: mergedValue / 32.0
 		});
 		GameManagerInstance.mergedValue = 0;

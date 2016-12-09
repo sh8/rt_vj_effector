@@ -1,6 +1,6 @@
 // OSC Senderを立ち上げる
 var oscsender = require('omgosc').UdpSender;
-var sender = new oscsender("localhost", 8100);
+var sender = new oscsender("169.254.140.218", 7777);
 
 var osc = require("osc"),
 	http = require("http"),
