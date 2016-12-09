@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/sh8/rt_vj_effector/master/images/readme_logo.png)
 
 ## Description
-Your play make a wonderful effect on VJ vision in real time.
+Your play makes a wonderful effect on VJ vision in real time.
 
 ## Requirement
 - node.js (>= 6.9) 
